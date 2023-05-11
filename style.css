@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-heading: "Staatliches", cursive;
+  --ff-text: "Palanquin", sans-serif;
+
+  --bg--primary: #eff1ff;
+  --bg-header: #8e9aaf;
+  --bg-h1: #cbc0d3;
+  --bg-names: #FEEAFA;
+}
+
+body {
+  background: var(--bg--primary);
+  width: 38.4rem;
+  /* height: auto; */
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--bg-header);
+}
+
+header h1 {
+  width: 100%;
+  height: 4.9rem;
+
+  background: var(--bg-h1);
+  font-family: var(--ff-heading);
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 3rem;
+
+  animation: downtop 500ms;
+}
+
+header h1 span {
+  filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+}
+
+header img {
+  width: 13.7rem;
+  height: 13.7rem;
+
+  margin: 3.2rem 12rem;
+
+  animation: topdown 700ms;
+}
+
+main {
+  min-width: 32rem;
+
+  margin: 0 3.2rem 6rem;
+
+  background: #eff1ff;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+p {
+  width: 30.5rem;
+  height: 7.5rem;
+
+  font-family: var(--ff-text);
+  font-style: normal;
+  font-size: 2rem;
+  line-height: 1.5rem;
+
+  margin: 1.4rem 0 6rem;
+  text-align: center;
+
+  color: #23053a;
+
+  animation: downtop 500ms;
+}
+
+.card {
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 2rem;
+
+  animation: downtop 500ms;
+}
+
+.card h2 {
+  width: 11.2rem;
+  height: 3.5rem;
+
+  background: var(--bg-names);
+  border-radius: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+
+  color: #4a4e69;
+  text-transform: uppercase;
+
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  animation: topdown 700ms;
+}
+
+/* Animacoes------------------------ */
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-35px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
